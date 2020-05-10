@@ -14,3 +14,34 @@ int main(int argc, char const *argv[])
 
     
 }
+
+class Account {
+    public :
+        void calculate() {
+            amount += amount * interestRate;
+        }
+        static double rate() { return interestRate ;}
+        static void rate(double);
+        
+    private :
+        std::string owner;
+        double amount;
+        static double interestRate;
+        static double initRate();
+};
+
+void Account::rate(double newRate){
+    interestRate = newRate;
+}
+
+class Example {
+    public :
+    static double rate;
+    static const int vecsize = 20;
+    static vector<double> vec(int);
+};
+
+double Example::rate;
+vector<double> Example::vec(int v){
+    rate = v;
+}
