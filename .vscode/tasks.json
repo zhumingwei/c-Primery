@@ -20,13 +20,16 @@
                 "clear": true
             },
             "options": {
-                "cwd": "${workspaceFolder}",
+                "cwd": "${workspaceFolder}"
             },
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
-        },
+            },
+            "problemMatcher": [
+                ""
+            ]
+        }
     ],
     "version": "2.0.0"
 }
