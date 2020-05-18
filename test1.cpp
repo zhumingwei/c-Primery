@@ -43,8 +43,3 @@ public:
     static vector<double> vec(int);
 };
 
-double Example::rate;
-vector<double> Example::vec(int v)
-{
-    rate = v;
-}
