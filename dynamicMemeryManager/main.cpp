@@ -15,4 +15,6 @@ int main(int, char**) {
     sv.push_back("1");
     sv.size();
     StrVec sv1 = sv;
+    sv.operator==(sv1);
+    
 }

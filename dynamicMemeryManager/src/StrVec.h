@@ -21,13 +21,16 @@ public :
     std::string *begin() const {return elements; }
     std::string *end() const {return first_free;}
 
+    bool operator==(const StrVec& vec){
+        return *vec.elements == *elements;
+    }
 private :
     std::allocator<std::string> alloc;
     void chk_n_alloc()
         {if (size() == capacity()) reallocate();}
     std::pair<string*, string*> alloc_n_copy
         (const string*,const string*);
-    void free(); //销毁元素并释放内存
+    void free(); //销毁元素并释放内存   
     void reallocate(); // 活的更多内存并拷贝已有内存
     string *elements; // 指向数组首元素的指针
     string *first_free;// 指向数组第一个空闲元素的指针
