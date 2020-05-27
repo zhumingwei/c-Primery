@@ -1,2 +1,3 @@
 *.dSYM/**
 *.out
+query_process_ng/cmake-build-debug/
